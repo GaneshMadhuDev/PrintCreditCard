@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Printing Digital Credit Card</title>
+    <link href="css/styles.css" rel="stylesheet"/>
+    <script src="lib/angular/angular.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/directives.js"></script>
+</head>
+<body ng-controller="PrintCreditCardController">
+
+<div class="center">
+    <div class="card">
+        <div class="flip">
+            <div class="front">
+                <div class="investor">Investor</div>
+                <div class="card-number">
+                    <div class="section">{{cardNumberFirst}}</div>
+                    <div class="section">{{cardNumberSecond}}</div>
+                    <div class="section">{{cardNumberThird}}</div>
+                    <div class="section">{{cardNumberFourth}}</div>
+                </div>
+                <div class="end"><span class="end-text">Expiry Date:</span><span
+                        class="end-date"> {{cardExpiryDate}}</span></div>
+                <div class="card-holder">{{cardHolderName}}</div>
+            </div>
+            <div class="back">
+                <div class="strip-black"></div>
+                <div class="cvv">
+                    <label>cvv</label>
+                    <div>{{cvvNumber}}</div>
+                </div>
+                <div class="terms">
+                    <p>Terms and Conditions</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="middleSection">
+    <div>
+        <div class="card-details">
+            <label>Card Number</label>
+            <div class="credit-input">
+                <input class="credit-cell" placeholder="0000" maxlength="4" ng-model="cardNumberFirst">
+                <input class="credit-cell" placeholder="0000" maxlength="4" ng-model="cardNumberSecond">
+                <input class="credit-cell" placeholder="0000" maxlength="4" ng-model="cardNumberThird">
+                <input class="credit-cell" placeholder="0000" maxlength="4" ng-model="cardNumberFourth">
+            </div>
+        </div>
+
+        <div class="card-details">
+            <label>Card Holder</label>
+            <input type="text" ng-model="cardHolderName">
+        </div>
+        <div class="card-details">
+            <label>Card Exp Date</label>
+            <input type="text" ng-model="cardExpiryDate">
+        </div>
+        <div class="card-details">
+            <label>CVV</label>
+            <input type="text" ng-model="cvvNumber">
+        </div>
+    </div>
+</div>
+
+<div class='print-button'>
+    <button ng-click="printCreditCard()">Print Credit Card</button>
+</div>
+
+</body>
+<script src="scripts/script.js"></script>
+</html>

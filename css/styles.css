@@ -1,0 +1,214 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Montserrat', 'Helvetica', sans-serif;
+    font-size: 14px;
+    line-height: 1.3;
+    background-color: #fff;
+}
+
+.center {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.middleSection {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.card {
+    width: 400px;
+    height: 250px;
+}
+.flip {
+    width: inherit;
+    height: inherit;
+    -webkit-transition: 0.7s;
+    transition: 0.7s;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-animation: flip 2.5s ease;
+    animation: flip 2.5s ease;
+}
+.front,
+.back {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: 15px;
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+    box-shadow: 0 1px 10px 1px rgba(0,0,0,0.3);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background-image: -webkit-gradient(linear, left top, right top, from(#111), to(#555));
+    background-image: linear-gradient(to right, #234ec7, #39589e);
+    overflow: hidden;
+}
+.front {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.investor {
+    position: relative;
+    top: 30px;
+    left: 25px;
+    text-transform: uppercase;
+}
+.card-number {
+    position: relative;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 75px 25px 10px;
+    font-size: 23px;
+    font-family: 'cc font', monospace;
+}
+.end {
+    margin-left: 28px;
+    margin-top: 35px;
+    text-transform: uppercase;
+    font-family: 'cc font', monospace;
+}
+.end .end-text {
+    font-size: 9px;
+    color: rgba(255,255,255,0.8);
+}
+.card-holder {
+    margin: 28px 27px;
+    text-transform: uppercase;
+    font-family: 'cc font', monospace;
+}
+.card:hover .flip {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+.back {
+    -webkit-transform: rotateY(180deg) translateZ(0);
+    transform: rotateY(180deg) translateZ(0);
+    background: #365db9;
+}
+.back .strip-black {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #000;
+}
+.back .cvv {
+    position: absolute;
+    top: 110px;
+    left: 0;
+    right: 0;
+    height: 36px;
+    width: 90%;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 5px;
+    text-align: right;
+    letter-spacing: 1px;
+    color: #000;
+    background: #fff;
+}
+.back .cvv label {
+    display: block;
+    margin: -30px 0 15px;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #fff;
+}
+.back .terms {
+    position: absolute;
+    top: 150px;
+    padding: 20px;
+    font-size: 10px;
+    text-align: justify;
+}
+
+.card-details {
+    display: flex;
+    margin-bottom: 10px;
+}
+.card-details label {
+    width: 150px;
+}
+.card-details input {
+    flex: 1;
+}
+
+.credit-input {
+    display: block;
+    max-width: 258px;
+    height: 34px;
+    padding: 4px 4px 4px 8px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.credit-cell {
+    width: 20%;
+    height: 25px;
+    padding: 6px 4px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+input {
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    -webkit-appearance: textfield;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-image: initial;
+}
+
+.print-button {
+    border: 1px solid #f66;
+    padding: 0.6rem 0.9rem;
+    background: #efefef;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 75%;
+    left: 55%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
