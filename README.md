@@ -4,15 +4,16 @@ An Angular 1.x web application for form the credit card / validating card detail
 
 Functional
 
-1. Added Credit Cards
+1. Add Credit Card Details
 2. Card Details : 
-    Card Number
-    Card Holder
-    Card Exp Date
+    Card Number,
+    Card Holder,
+    Card Exp Date,
     Card CVV
     
-3. Flipping Card
+3. Flipping Card to other side
 4. Print Credit Card
+5. Credit Card Number Validations
 
 
 
